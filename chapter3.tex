@@ -49,10 +49,54 @@ $ emacs --version
 \end{lstlisting}
 
 % 源码安装
-\item 第二种方法，相对于第一种方法来说，略微复杂，但是软件版本还是比较高的。
+\item 第二种方法，相对于第一种方法来说，略微复杂，比如： 依赖问题; \\
+但是软件版本还是比较高的， 但是对于新手来说 越简单的安装方式，就是最好的方式, 
+这也是应该提倡的。
 
+\begin{itemize}
+\item 下载源码 \\ 
+\begin{verbatim}
+https://www.gnu.org/software/emacs/download.html#gnu-linux
+\end{verbatim}
+
+\item 解压
+\begin{verbatim}  
+$ tar xvf emacs-26.2.tar.gz  // 解压，并切换到解压后的目录
+\end{verbatim}
+
+\item 安装依赖
+\begin{verbatim}  
+$ sudo apt-get install build-essential \
+  texinfo libx11-dev libxpm-dev libjpeg-dev \
+  libpng-dev libgif-dev libtiff-dev libgtk2.0-dev \
+  libncurses-dev libxpm-dev automake autoconf 
+\end{verbatim}
+
+\item 编译及安装
+\begin{verbatim}  
+$ ./configure --with-mailutils 
+$ sudo make && sudo make install  
+\end{verbatim}
+
+\item 检测
+\begin{verbatim}
+$ emacs --version
+\end{verbatim}
+
+\end{itemize}
 \end{enumerate}
+\newpage
 
 \subsection{jdk}
+这里安装的是 oracle jdk
+
+\flushleft
+\begin{enumerate}
+\begin{itemize}
+\item 下载 
+ 
+\end{itemize}
+\end{enumerate}
+
 \subsection{python}
 \subsection{docker}
