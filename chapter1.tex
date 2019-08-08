@@ -1,0 +1,19 @@
+\section{安装}
+\subsection{下载镜像}
+到\href{https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/}{清华源}下载系统的镜像，下载速度比官网下载速度快一点。
+
+建议安装最新的版本的镜像.
+\subsection{制作启动盘镜像}
+% window 系统下 
+\flushleft
+\begin{enumerate}
+\item 如果在 window 系统下, 可以使用 Rufus, 选好镜像后，分区类型选GPT，刻录模式为DD
+\item 如果在 linux 系统下，可以使用 dd 命令。
+\begin{lstlisting}
+$ sudo fdisk -l 
+$ umount /dev/sdc1
+$ sudo mkfs.vfat /dev/sdc -I
+$ sudo dd bs=4M if=/home/gog/下载/manjaro-kde-18.0.4-stable-x86_64.iso of=/dev/sdc status=progress
+\end{lstlisting}
+
+\end{enumerate}

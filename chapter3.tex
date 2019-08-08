@@ -1,0 +1,58 @@
+\section{基本软件的配置}
+\subsection{zsh}
+由于系统原来 shell 不怎么好用，所以这里我们推荐使用 zsh \\
+
+安装步骤：
+\begin{lstlisting}
+$ sudo apt-get install -y zsh
+$ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# 将 zsh 更改为默认的 shell 
+$ chsh -s /bin/zsh 
+\end{lstlisting}
+
+安装 percol
+\begin{lstlisting}
+$ sudo pip install percol
+$ deepin-editor ~/.zshrc 
+\end{lstlisting}
+
+添加下面的内容：
+\begin{verbatim}
+function exists { which $1 &> /dev/null }
+
+if exists percol; then
+    function percol_select_history() {
+        local tac
+        exists gtac && tac="gtac" || { exists tac && tac="tac" || { tac="tail -r" } }
+        BUFFER=$(fc -l -n 1 | eval $tac | percol --query "$LBUFFER")
+        CURSOR=$#BUFFER         # move cursor
+        zle -R -c               # refresh
+    }
+
+    zle -N percol_select_history
+    bindkey '^R' percol_select_history
+fi
+\end{verbatim}
+
+\subsection{emacs}
+下面介绍二种方式安装 emacs:
+\flushleft
+\begin{enumerate}
+% apt 安装
+\item 每一种方法，比较简单，但是 emacs 版本还是比较低的。
+\begin{lstlisting}
+$ sudo apt install -y emacs 
+
+// 查看版本
+$ emacs --version  
+\end{lstlisting}
+
+% 源码安装
+\item 第二种方法，相对于第一种方法来说，略微复杂，但是软件版本还是比较高的。
+
+\end{enumerate}
+
+\subsection{jdk}
+\subsection{python}
+\subsection{docker}

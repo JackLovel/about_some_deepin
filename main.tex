@@ -1,6 +1,7 @@
 \documentclass[UTF8]{ctexart}
 \usepackage{xeCJK}
 \usepackage[colorlinks, linkcolor=red]{hyperref}
+\usepackage{xcolor}
 \setCJKmainfont{SimSun}
 \usepackage{listings}
 \title{Deepin Linux 使用笔记}
@@ -9,46 +10,12 @@
 \maketitle
 \newpage
 \tableofcontents
+
+% 章节
 \newpage
-\section{安装}
-\subsection{下载镜像}
-到\href{https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/}{清华源}下载系统的镜像，下载速度比官网下载速度快一点。
-
-建议安装最新的版本的镜像.
-\subsection{制作启动盘镜像}
-% window 系统下 
-\flushleft
-\begin{enumerate}
-\item 如果在 window 系统下, 可以使用 Rufus, 选好镜像后，分区类型选GPT，刻录模式为DD
-\item 如果在 linux 系统下，可以使用 dd 命令。
-\begin{lstlisting}
-$ sudo fdisk -l 
-$ umount /dev/sdc1
-$ sudo mkfs.vfat /dev/sdc -I
-$ sudo dd bs=4M if=/home/gog/下载/manjaro-kde-18.0.4-stable-x86_64.iso of=/dev/sdc status=progress
-\end{lstlisting}
-
-\end{enumerate}
-
-\section{系统配置}
-\subsection{更新源}
-这里阿里源为例：
-\begin{lstlisting}
-$ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak  
-$ sudo deepin-editor /etc/apt/sources.list
-\end{lstlisting}
-我们对原文件做了一个备份，而不是直接修改，这是一个好的习惯,\\
-对于以后的 软件 配置时，如果你不是十分的有把握，就先进行备份，然后进行修改。\\
-
-
-修改 sources.list 文件: \\
-将 http://packages.deepin.com/deepin 替换成 http://mirrors.aliyun.com/deepin
-\section{基本软件的配置}
-\subsection{zsh}
-\subsection{emacs}
-\subsection{jdk}
-\subsection{python}
-\subsection{docker}
-\section{基本命令}
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
 
 \end{document}
