@@ -1,22 +1,54 @@
 \section{安装}
 \subsection{下载镜像}
-到\href{https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/}{清华源}下载系统的镜像，下载速度比官网下载速度快一点。
+可以到\href{https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/}{清华源}下载最新的系统镜像
 
-建议安装最新的版本的镜像.
+\begin{lstlisting}
+https://mirrors.tuna.tsinghua.edu.cn/deepin-cd/
+\end{lstlisting}
 \subsection{制作启动盘镜像}
 % window 系统下 
 \flushleft
 \begin{enumerate}
 \item 如果在 window 系统下, 可以使用 Rufus, 选好镜像后，分区类型选GPT，刻录模式为DD
+
+Rufus 下载地址：\\
+\begin{lstlisting}
+ https://share.weiyun.com/51nzNxs
+\end{lstlisting}
 \item 如果在 linux 系统下，可以使用 dd 命令。
 \begin{lstlisting}
+
 $ sudo fdisk -l 
+
+# 我的U盘分区： /dev/sdc
 $ umount /dev/sdc1
 $ sudo mkfs.vfat /dev/sdc -I
 
-// 我本地 deepin 镜像的完整路径：/home/gog/下载/deepin-15.11-amd64.iso 
-// U盘分区： /dev/sdc
+# 我本地 deepin 镜像的完整路径：/home/gog/下载/deepin-15.11-amd64.iso 
+# U盘分区： /dev/sdc
 $ sudo dd bs=4M if=/home/gog/下载/deepin-15.11-amd64.iso of=/dev/sdc status=progress
 \end{lstlisting}
 
+\subsection{分区建议}
+这是一个建议的分区，而不是必须的，仅供参考, 这里以 250G 为例：\\
+
+\begin{tabular}{|l|c|r|}
+\hline
+ 挂载点 & 分区大小(G) & 占比(百分比)\\
+\hline
+   / & 100 & 40 \\      
+\hline
+   /home & 100 & 40 \\      
+\hline
+  交换分区(/swap) & 10 & \\
+\hline
+  /boot/efi & 0.2 & \\
+\hline
+
+\end{tabular}
 \end{enumerate}
+
+
+这里分区有几点要说明一下：\\
+1. 根分区和 home分区占大比重，其中 home 你可以在最后分，把剩下的所有的都给它。\\
+2. 这里的换算： 1GB = 1000MB  

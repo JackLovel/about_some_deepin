@@ -5,9 +5,18 @@
 $ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak  
 $ sudo deepin-editor /etc/apt/sources.list
 \end{lstlisting}
+
 我们对原文件做了一个备份，而不是直接修改，这是一个好的习惯,\\
 对于以后的 软件 配置时，如果你不是十分的有把握，就先进行备份，然后进行修改。\\
 
 
 修改 sources.list 文件: \\
-将 http://packages.deepin.com/deepin 替换成 http://mirrors.aliyun.com/deepin
+将其中的 http://packages.deepin.com/deepin 替换成 http://mirrors.aliyun.com/deepin \\
+
+\begin{lstlisting}
+# 更新软件列表
+$ sudo apt update  
+
+# 升级软件 
+$ sudo apt upgrade 
+\end{lstlisting}

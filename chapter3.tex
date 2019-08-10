@@ -1,7 +1,7 @@
 \section{基本软件的配置}
 % zsh
 \subsection{zsh}
-由于系统原来 shell 不怎么好用，所以这里我们推荐使用 zsh \\
+由于系统原来 bash shell 不怎么好用，所以这里我们推荐使用 zsh \\
 
 安装步骤：
 \begin{lstlisting}
@@ -15,6 +15,9 @@ $ chsh -s /bin/zsh
 
 安装 percol
 \begin{lstlisting}
+# 如果 pip 没有安装的话
+$ sudo apt install -y python-pip
+ 
 $ sudo pip install percol
 $ deepin-editor ~/.zshrc 
 \end{lstlisting}
@@ -53,9 +56,8 @@ $ emacs --version
 \end{lstlisting}
 
 % 源码安装
-\item 第二种方法，相对于第一种方法来说，略微复杂，比如： 依赖问题; \\
-但是软件版本还是比较高的， 但是对于新手来说 越简单的安装方式，就是最好的方式, 
-这也是应该提倡的。
+\item 第二种方法，相对于第一种方法来说，略微复杂，比如： 依赖问题;
+但是软件版本还是比较高的.
 
 \begin{itemize}
 \item 下载源码 \\ 
@@ -167,5 +169,26 @@ $ sudo apt install -y ipython3
 
 % qt creator
 \subsection{qt creator}
+\begin{itemize}
+\item 下载
+\href{http://iso.mirrors.ustc.edu.cn/qtproject/archive/qt/5.8/5.8.0/qt-opensource-linux-x64-5.8.0.run}{qt-opensource-linux-x64-5.8.0.run下载地址}
 
+\item 安装
+\begin{lstlisting}
+$ chmod +x qt-opensource-linux-x64-5.8.0.run 
+$ ./qt-opensource-linux-x64-5.8.0.run 
+\end{lstlisting}
+
+\item 解决中文输入
+\begin{lstlisting}
+$ cd /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts
+
+# 我的 qt安装目录： ~/Qt5.8.0
+$ cp libfcitxplatforminputcontextplugin.so \
+  ~/Qt5.8.0/5.8/gcc_64/plugins/platforminputcontexts
+
+$ cp libfcitxplatforminputcontextplugin.so \
+  ~/Qt5.8.0/Tools/QtCreator/lib/Qt/plugins/platforminputcontexts
+\end{lstlisting}
+\end{itemize}
 % docker
