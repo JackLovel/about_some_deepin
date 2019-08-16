@@ -3,7 +3,8 @@
 \subsection{zsh}
 由于系统原来 bash shell 不怎么好用，所以这里我们推荐使用 zsh \\
 
-安装步骤：
+\begin{itemize}
+\item 安装 zsh：
 \begin{lstlisting}
 $ sudo apt-get install -y zsh
 $ sh -c \
@@ -13,7 +14,7 @@ $ sh -c \
 $ chsh -s /bin/zsh 
 \end{lstlisting}
 
-安装 percol
+\item 安装 percol
 \begin{lstlisting}
 # 如果 pip 没有安装的话
 $ sudo apt install -y python-pip
@@ -22,7 +23,7 @@ $ sudo pip install percol
 $ deepin-editor ~/.zshrc 
 \end{lstlisting}
 
-添加下面的内容：
+\item 添加配置
 \begin{lstlisting}
 function exists { which $1 &> /dev/null }
 
@@ -39,6 +40,7 @@ if exists percol; then
     bindkey '^R' percol_select_history
 fi
 \end{lstlisting}
+\end{itemize}
 \newpage
 
 % emacs 
