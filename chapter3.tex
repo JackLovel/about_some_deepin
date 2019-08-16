@@ -166,6 +166,32 @@ $ sudo apt install -y ipython
 # python3
 $ sudo apt install -y ipython3 
 \end{lstlisting}
+
+\item pyenv   
+
+python 版本管理工具    
+\begin{lstlisting}
+# 下载 pyenv
+$ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+
+# 配置环境
+$ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+$ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+$ echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+
+# 使配置生效
+$ source ~/.zshrc
+
+# 检测
+$ pyenv --help
+
+# deepin 系统中不建议 删除 原有的python版本，具体原因这里就不细说了。
+# 这里我举一个 安装 python3.7.4 版本的过程：
+$ pyenv install -v 3.7.4
+$ pyenv global 3.7.4 # 设置系统中 python 版本
+$ pyenv versions # 查看当前系统 python 的版本
+
+\end{lstlisting}
 \end{itemize}
 \newpage
 
@@ -194,4 +220,3 @@ $ cp libfcitxplatforminputcontextplugin.so \
 \end{lstlisting}
 \end{itemize}
 % docker
-% pyenv 
