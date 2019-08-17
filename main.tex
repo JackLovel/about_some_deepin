@@ -1,4 +1,5 @@
-\documentclass[UTF8, a4paper]{ctexart}
+% \documentclass[UTF8, a4paper]{ctexart}
+\documentclass{ctexbook}
 \usepackage{xeCJK}
 \usepackage[colorlinks, linkcolor=red]{hyperref}
 \usepackage{xcolor}
@@ -46,9 +47,17 @@
     columns=flexible, % 等宽字体
 } 
 
-\setCJKmainfont{SimSun}
+% \setCJKmainfont{SimSun}
+\setCJKmainfont{思源黑体 CN Normal}
+
+% 标题页
 \title{Deepin Linux 使用笔记}
 \author{JackLovel}
+\CTEXoptions[today=small]
+
+% 标题左对齐
+\CTEXsetup[format={\Large}]{section} 
+
 \begin{document}
 
 % 段间距
@@ -58,12 +67,9 @@
 \setlength\parindent{1em}
 
 \maketitle
-\newpage
 \tableofcontents
 \thispagestyle{empty} % 目录页不显示页码
-
 % 章节
-\newpage
 \include{chapter1}
 \include{chapter2}
 \include{chapter3}
