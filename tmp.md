@@ -1,5 +1,5 @@
-### maven 
-`settings.xml` <mirrors> 
+### idea maven 配置国内源  
+搜索 idea 文件夹下的所有`settings.xml` ， 并把下面的放到  `mirrors` 标签对内
 ```
       <mirror>  
             <id>alimaven</id>  
