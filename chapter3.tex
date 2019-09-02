@@ -40,6 +40,7 @@ if exists percol; then
 fi
 \end{lstlisting}
 \end{itemize}
+\newpage
 
 % emacs 
 \section{emacs}
@@ -125,6 +126,7 @@ $ java -version
 $ javac 
 \end{lstlisting}
 \end{itemize}
+\newpage
 
 % python
 \section{python}
@@ -217,3 +219,38 @@ $ cp libfcitxplatforminputcontextplugin.so \
   ~/Qt5.8.0/Tools/QtCreator/lib/Qt/plugins/platforminputcontexts
 \end{lstlisting}
 \end{itemize}
+\newpage
+
+% tex live 2019
+\section{latex}
+tex live 安装 \\
+
+\begin{itemize}
+\item 下载
+\begin{lstlisting}
+// 下载 texlive2019.iso
+https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/
+\end{lstlisting}
+
+\item 安装 latex：
+\begin{lstlisting}
+// 首先，解压 镜像
+// 然后安装
+$ chmod +x install-tl
+$ sudo ./install-tl
+\end{lstlisting}
+
+添加下面的内容
+\begin{lstlisting}
+export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
+export MANPATH=/usr/local/texlive/2019/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2019/texmf-dist/doc/info:$INFOPATH
+\end{lstlisting}
+
+\item 测试
+\begin{lstlisting}
+$ source ~/.zshrc
+$ tex -v
+\end{lstlisting}
+\end{itemize}
+
