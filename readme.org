@@ -21,3 +21,10 @@ $ xelatex main.tex -o main.pdf
 请使用管理员权限安装 fonts 目录下的字体
 #+END_SRC
 
+#+BEGIN_QUOTE 
+编译后无法 显示 目录，
+#+END_QUOTE
+#+BEGIN_SRC 
+多编译几次就行了（至少两次）
+#+END_SRC
+
