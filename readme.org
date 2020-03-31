@@ -13,7 +13,7 @@ $ xelatex main.tex -o main.pdf
 *** 下载
 [[https://raw.githubusercontent.com/JackLovel/use_deepin/master/main.pdf][点击下载]]
 
-*** QAQ
+*** 疑问
 #+BEGIN_QUOTE 
 ! Package fontspec Error: The font  cannot be found.
 #+END_QUOTE
