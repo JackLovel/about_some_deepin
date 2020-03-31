@@ -2,13 +2,13 @@
 这是一本针对于 =有一点Linux基础= ，并且基于 =deepin os 15.11= 系统 的书
 
 
+*** 字体
+在 font 目录下，window 环境下 需要 使用 管理员 安装字体
+
 *** 编译
 #+BEGIN_SRC 
 $ xelatex main.tex -o main.pdf 
 #+END_SRC
-
-*** 字体
-在 font 目录下，window 环境下 需要 使用 管理员 安装字体
 
 *** 下载
 [[https://raw.githubusercontent.com/JackLovel/use_deepin/master/main.pdf][点击下载]]
