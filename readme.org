@@ -7,10 +7,7 @@
 
 *** 编译
 #+BEGIN_SRC 
-$ xelatex main.tex 
-$ bibtex main.aux  
-$ xelatex main.tex 
-$ xelatex main.tex 
+脚本工具 run.py
 #+END_SRC
 
 *** 下载
