@@ -8,6 +8,8 @@
 \usepackage{fontspec}
 \usepackage{geometry}
 \usepackage{fancyhdr}
+\usepackage{cite}
+\usepackage[super]{gbt7714} % 中文文献包
 
 % consolas
 \newfontfamily\consolas{Consolas}
@@ -59,7 +61,9 @@
 
 % \usepackage[sf,bf,it,centering]{titlesec}
 \CTEXsetup[format={\Large}]{section} % 标题左对齐
-
+% %导入数据库的参考文献模板
+% \bibliographystyle{plain}
+% 正文区
 \begin{document}
 
 % 页眉页脚
@@ -92,5 +96,10 @@
 \include{chapter2}
 \include{chapter3}
 \include{chapter4}
+
+这是个测试\cite{Nobody06}.
+
+% \bibliographystyle{plain}
+\bibliography{main}
 
 \end{document}
