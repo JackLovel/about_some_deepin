@@ -6,6 +6,7 @@
 在 font 目录下，window 环境下 需要 使用 管理员 安装字体
 
 *** 编译
+编译之前，安装好 [[https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive2019.iso][texlive]]
 #+BEGIN_SRC 
 脚本工具 run.py
 #+END_SRC
