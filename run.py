@@ -2,9 +2,19 @@ import os
 
 def main():
     path = os.path.abspath(os.path.dirname(__file__))
-    print("===============")
-    compile(path)
-    # clear(path)
+    prompt = """
+             输入 1 或者 2 来执行下面的操作，输入 q 退出
+             1.compile project 
+             2.clear project
+            """
+    while True: 
+        i = input(prompt)
+        if i == 'q': 
+            break 
+        if i == '1': 
+            compile(path)
+        if i == '2': 
+            clear(path)
 
 # 编译项目
 def compile(path):
