@@ -1,18 +1,17 @@
 *** 关于
 这是一本针对于 =有一点Linux基础= ，并且基于 =deepin os 15.11= 系统 的书
 
-*** 字体
-在 font 目录下，window 环境下 需要 使用 管理员 安装字体
-
-*** 编译
-编译之前，安装好 [[https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive2019.iso][texlive]],
-然后 运行 =run.py= 进行编译
+*** 
 
 *** 下载
-当然了，你也可以不用编译，直接下载 编译好的 pdf 文件
 [[https://raw.githubusercontent.com/JackLovel/use_deepin/master/main.pdf][点击下载]]
 
 *** 疑问
+#+BEGIN_QUOTE
+我不想下载 编译好的 pdf 文件，想自已编译？
+#+END_QUOTE
+编译之前，安装好 [[https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive2019.iso][texlive]],
+然后 运行 =run.py= 进行编译
 #+BEGIN_QUOTE
 ! Package fontspec Error: The font  cannot be found.
 #+END_QUOTE
@@ -26,3 +25,10 @@
 #+BEGIN_SRC
 多编译几次就行了（至少两次）
 #+END_SRC
+#+BEGIN_QUOTE
+如果 编译时，无法找到字体
+#+END_QUOTE
+#+BEGIN_SRC
+在 font 目录下，如果你是 window 环境, 需要 使用 管理员 安装字体
+#+END_SRC
+
