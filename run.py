@@ -15,7 +15,13 @@ def main():
             compile(path)
         if i == '2': 
             clear(path)
+        if i == 'd':
+            debug(path) 
 
+# debug 
+def debug(path):
+    pass
+        
 # 编译项目
 def compile(path):
     os.chdir(path)
@@ -29,15 +35,11 @@ def compile(path):
 
 # 清理项目
 def clear(path):
-    prefixs = ['aux', 'blg', 'out', 'log', 'toc', 'bbl', 'pdf']
-    files = os.listdir(path)
-    for f in files:
-        prefix = f.split(".")[-1] 
-        exists = prefix in prefixs
-        if (exists):
-            remove_file(path, f)
-        else:
-            pass
+    prefixs = ('aux', 'blg', 'out', 'log', 'toc', 'bbl', 'pdf')
+    filenames = os.listdir(path)
+    names = [name for name in filenames if name.endswith(prefixs)]
+    for n in names:
+        remove_file(path, n)
 
 
 def remove_file(path, filename):
