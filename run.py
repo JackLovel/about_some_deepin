@@ -1,7 +1,7 @@
 import os
 
 def main():
-    path = os.path.abspath(os.path.dirname(__file__))
+    path = project_path() 
     prompt = """
              输入 1 或者 2 来执行下面的操作，输入 q 退出
              1.compile project 
@@ -18,7 +18,8 @@ def main():
         if i == 'd':
             debug(path) 
 
-# debug 
+project_path = lambda : os.path.abspath(os.path.dirname(__file__)) 
+
 def debug(path):
     pass
         
