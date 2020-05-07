@@ -42,8 +42,7 @@ class Run:
         pass 
 
 if __name__ == "__main__":
-    r = Run() 
-    p = r.path 
+    run = Run() 
 
     prompt = """
              输入 1、2或者3 来执行下面的操作，输入 q 退出
@@ -56,8 +55,8 @@ if __name__ == "__main__":
         if i == 'q': 
             break 
         if i == '1': 
-            r.compile()
+            run.compile()
         if i == '2': 
-            r.clear()
+            run.clear()
         if i == '3':
-            r.list_dir() 
+            run.list_dir() 
