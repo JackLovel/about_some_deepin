@@ -7,8 +7,8 @@
 ### 疑问
 
 > 我不想下载 编译好的 pdf 文件，想自已编译？
-
-编译之前，安装好 [texlive](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive2019.iso),
+1. 先安装字体，字体存放在项目的 font 目录里。
+2. 编译之前，安装好 [texlive](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive2019.iso) 和 [python3](https://www.python.org/downloads/),
 然后 运行 `run.py` 进行编译
 
 
