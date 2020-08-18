@@ -12,6 +12,16 @@
 然后 运行 `run.py` 进行编译
 
 
+### 安装字体 
+
+- window 
+
+在 font 目录下 点击进行安装，需要 使用 `管理员` 安装字体
+
+- linux 
+
+运行项目里的 [install_font_for_linux.py]() 文件  
+
 > 如果编译时，无法找到字体 (! Package fontspec Error: The font  cannot be found.)
 
 在 font 目录下 点击进行安装，特别的，如果你是 `window` 环境, 需要 使用 `管理员` 安装字体
