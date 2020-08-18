@@ -2,7 +2,7 @@
 这是一本针对于 `有一点Linux基础` ，并且基于 `deepin os 15.11` 系统 的书
 
 ### 下载
-[点击下载](./main.pdf)
+[点击下载](main.pdf)
 
 ### 疑问
 
@@ -20,4 +20,4 @@
 
 > Linux
 
-运行项目里的 [install_font_for_linux.py](./install_font_for_linux.py) 文件  
+运行项目里的 [install_font_for_linux.py](install_font_for_linux.py) 文件  
