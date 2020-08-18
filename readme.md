@@ -2,7 +2,7 @@
 这是一本针对于 `有一点Linux基础` ，并且基于 `deepin os 15.11` 系统 的书
 
 ### 下载
-[点击下载](https://raw.githubusercontent.com/JackLovel/use_deepin/master/main.pdf)
+[点击下载](./main.pdf)
 
 ### 疑问
 
