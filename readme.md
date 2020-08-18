@@ -20,4 +20,4 @@
 
 > Linux
 
-运行项目里的 [install_font_for_linux.py](https://github.com/JackLovel/use_deepin/blob/master/install_font_for_linux.py) 文件  
+运行项目里的 [install_font_for_linux.py](./install_font_for_linux.py) 文件  
