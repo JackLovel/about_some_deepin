@@ -253,4 +253,88 @@ $ source ~/.zshrc
 $ tex -v
 \end{lstlisting}
 \end{itemize}
+\newpage
 
+% mysql 8.0 
+\section{mysql}
+
+\begin{itemize}
+\item 安装：
+\begin{lstlisting}
+$ sudo apt install mysql-server -y
+\end{lstlisting}
+
+\item 初始化数据库
+\begin{lstlisting}
+$ sudo mysql_secure_installation
+
+// 参考
+Securing the MySQL server deployment.
+
+Connecting to MySQL using a blank password.
+
+VALIDATE PASSWORD COMPONENT can be used to test passwords
+and improve security. It checks the strength of password
+and allows the users to set only those passwords which are
+secure enough. Would you like to setup VALIDATE PASSWORD component?
+
+Press y|Y for Yes, any other key for No: N
+Please set the password for root here.
+
+New password: 
+
+Re-enter new password: 
+By default, a MySQL installation has an anonymous user,
+allowing anyone to log into MySQL without having to have
+a user account created for them. This is intended only for
+testing, and to make the installation go a bit smoother.
+You should remove them before moving into a production
+environment.
+
+Remove anonymous users? (Press y|Y for Yes, any other key for No) : N
+
+ ... skipping.
+
+Normally, root should only be allowed to connect from
+'localhost'. This ensures that someone cannot guess at
+the root password from the network.
+
+Disallow root login remotely? (Press y|Y for Yes, any other key for No) : Y
+Success.
+
+By default, MySQL comes with a database named 'test' that
+anyone can access. This is also intended only for testing,
+and should be removed before moving into a production
+environment.
+
+Remove test database and access to it? (Press y|Y for Yes, any other key for No) : N
+
+ ... skipping.
+Reloading the privilege tables will ensure that all changes
+made so far will take effect immediately.
+
+Reload privilege tables now? (Press y|Y for Yes, any other key for No) : Y
+Success.
+
+All done! 
+\end{lstlisting}
+
+\item 创建数据库
+\begin{lstlisting}
+$ sudo mysql -hlocalhost -uroot -p
+
+// 更改加密方式
+$ ALTER USER 'root'@'localhost' IDENTIFIED BY 数据库root字符串 PASSWORD EXPIRE NEVER;
+
+// 更改密码
+$ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 数据库root字符串;
+
+// 刷新权限
+$ FLUSH PRIVILEGES;
+\end{lstlisting}
+
+\item 验证
+\begin{lstlisting}
+$ mysql -hlocalhost -uroot -p
+\end{lstlisting}
+\end{itemize}
