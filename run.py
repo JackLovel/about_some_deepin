@@ -20,7 +20,7 @@ class Run:
 
     def clear(self):
         path = self.path 
-        prefixs = ('aux', 'blg', 'out', 'log', 'toc', 'bbl', 'pdf')
+        prefixs = ('aux', 'blg', 'out', 'log', 'toc', 'bbl', 'pdf', 'fls', 'fdb_latexmk')
         filenames = os.listdir(path)
         names = [name for name in filenames if name.endswith(prefixs)]
         for n in names:
@@ -33,10 +33,10 @@ class Run:
     
     def list_dir(self):
         path = self.path 
-        print("=========项目下的文件或目录========")
+        print("{0}项目下的文件或目录{0}".format("="*5))
         for f in os.listdir(path):
             print(f)
-        print("============================")
+        print("="*20)
 
     def debug(self):
         pass 
@@ -45,14 +45,14 @@ if __name__ == "__main__":
     run = Run() 
 
     prompt = """
-             输入 1、2或者3 来执行下面的操作，输入 q 退出
+             输入 1、2或者3 来执行下面的操作，输入 q 或 Q 退出
              1.编译项目
              2.清除多余文件
              3.查看项目下的文件
             """
     while True: 
         i = input(prompt)
-        if i == 'q': 
+        if i == 'q' or i == 'Q': 
             break 
         if i == '1': 
             run.compile()
