@@ -363,7 +363,7 @@ $ sudo apt-get install docker-ce
 // 检查是否安装成功 
 $ sudo docker run hello-world
 
-// 设置用户权限
+// 设置用户权限, 把当前用户添加 docker 用户组里
 $ sudo usermod -a -G docker $USER
 
 \end{lstlisting}
@@ -385,7 +385,10 @@ $ sudo systemctl restart docker
 \item 测试
 来下载一个镜像，来测试一下, 添加的国内源是否生效
 \begin{lstlisting}
+// 拉取 ubuntu 镜像
 $ docker pull ubuntu
+
+// 运行以 ubuntu 为镜像，并命名为 ubuntu-test 的容器 
 $ docker run -itd --name ubuntu-test ubuntu
 \end{lstlisting}
 \end{itemize}
