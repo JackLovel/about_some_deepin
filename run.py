@@ -3,6 +3,12 @@ import os
 class Run:
     def __init__(self):
         self.path = os.path.abspath(os.path.dirname(__file__)) 
+        
+        # kde 下的 pdf 查看工具
+        self.pdfTool = "okular" 
+        
+        # 编译之后的 pdf
+        self.pdfFile = "main.pdf"
 
     def change_dir(self, path):
         os.chdir(path)
@@ -37,6 +43,17 @@ class Run:
         for f in os.listdir(path):
             print(f)
         print("="*20)
+    
+    def view_pdf(self):
+        pdfFilePath = os.path.join(self.path, self.pdfFile)
+        fileExist = os.path.exists(pdfFilePath)
+
+        if fileExist: 
+            os.system("{0} {1}".format(self.pdfTool, self.pdfFile))
+        else: 
+            print("="*22)
+            print("警告{0} 不存在".format(self.pdfFile))
+            print("="*22)
 
     def debug(self):
         pass 
@@ -45,10 +62,11 @@ if __name__ == "__main__":
     run = Run() 
 
     prompt = """
-             输入 1、2或者3 来执行下面的操作，输入 q 或 Q 退出
+             输入 1、2、3、4来执行下面的操作，输入 q 或 Q 退出
              1.编译项目
              2.清除多余文件
              3.查看项目下的文件
+             4.查看 pdf 
             """
     while True: 
         i = input(prompt)
@@ -60,3 +78,5 @@ if __name__ == "__main__":
             run.clear()
         if i == '3':
             run.list_dir() 
+        if i == '4':
+            run.view_pdf()
