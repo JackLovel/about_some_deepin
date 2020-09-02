@@ -30,5 +30,35 @@ $ sudo screenfetch
     \label{fig:screenfetch} %此处的label相当于一个图片的专属标志，目的是方便上下文的引用
 \end{figure}
 \end{itemize}
+\newpage
 
-% \section{make}
+\section{apt}
+debian 系\footnote{常见的 debian系：deepin, ubuntu, kubuntu, kail, xubuntu}用的最多的命令，是必需的命令之一。
+\begin{itemize}
+\item 常用命令
+\begin{lstlisting}
+# 更新软件列表
+$ sudo apt-get update 
+
+# 升级软件
+$ sudo apt-get updrade 
+
+# 删除包
+$ sudo apt-get remove <package_name>
+
+# 自动卸载软件，及其有依赖相关的软件包
+$ sudo apt-get autoremove 
+
+# 安装包
+$ sudo apt-get install -y <package_name>
+
+# 支持模糊搜索  
+$ sudo apt-get search <package_name> 
+
+# 解决依赖
+$ sudo apt install -f
+\end{lstlisting}
+
+\item ppa 源\footnote{官网：https://launchpad.net/}
+	
+\end{itemize}
