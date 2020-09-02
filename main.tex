@@ -1,5 +1,6 @@
 \documentclass[a4paper,titlepage,UTF8, openany]{ctexbook}
 
+% 导言区
 % 包
 \usepackage{xeCJK}
 \usepackage[colorlinks, linkcolor=red]{hyperref}
@@ -66,9 +67,10 @@
 \CTEXsetup[format={\Large}]{section} % 标题左对齐
 % %导入数据库的参考文献模板
 % \bibliographystyle{plain}
-% 正文区
-\begin{document}
+% 导言区
 
+\begin{document}
+% 正文区
 % 页眉页脚
 \pagestyle{fancy}
 \lhead{Deepin Linux 使用笔记}
@@ -100,10 +102,11 @@
 \include{chapter2}
 \include{chapter3}
 \include{chapter4}
+\include{chapter5}
 
 % 这是个测试\cite{Nobody06}.
 
 % \bibliographystyle{plain}
 \bibliography{main}
-
+% 正文区
 \end{document}
