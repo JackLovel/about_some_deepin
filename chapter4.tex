@@ -1,5 +1,5 @@
 \chapter{其它的软件}
-\section{Rust}
+\section{Rust语言}
 
 \begin{itemize}
 \item 安装\footnote{官网安装教程：https://www.rust-lang.org/learn/get-started}：
@@ -26,6 +26,46 @@ $ cargo --version
 
 # 检测 rust 版本
 $ rustc --version 
+\end{lstlisting}
+\end{itemize}
+\newpage
+
+\section{Go语言}
+
+\begin{itemize}
+\item 安装\footnote{官网安装教程：https://github.com/golang/go/wiki/Ubuntu}：
+% 代码段
+\begin{lstlisting}
+$ sudo add-apt-repository ppa:longsleep/golang-backports
+$ sudo apt update
+$ sudo apt install golang-go
+\end{lstlisting}
+	
+\item 添加国内源
+\begin{lstlisting}
+export GOPROXY=https://goproxy.cn
+\end{lstlisting}
+
+\item 使生效
+\begin{lstlisting}
+$ source ~/.bashrc
+\end{lstlisting}
+	
+\item 检测
+\begin{lstlisting}
+$ go version
+\end{lstlisting}
+
+\item 例子 hello.go: 
+
+\begin{lstlisting}
+package main
+import "fmt" 
+func main() {
+	fmt.Printf("你好世界\n")
+}
+
+// 在命令行里运行：go run hello.go
 \end{lstlisting}
 \end{itemize}
 
