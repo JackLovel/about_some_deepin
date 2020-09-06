@@ -5,11 +5,11 @@
 \item 修改更新源 \footnote{类似的像 ubuntu 的发行版本，也是通过替换 相应的源的地址就可以了。}
 \begin{lstlisting}
 // 以阿里源为例
-  
 $ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak  
-$ sudo deepin-editor /etc/apt/sources.list
+$ sudo nano /etc/apt/sources.list
 
-* 将其中的 http://packages.deepin.com/deepin 替换成 http://mirrors.aliyun.com/deepin 
+* 仅需要将其中的 http://cn.archive.ubuntu.com/ubuntu/ 替换成 
+   http://mirrors.aliyun.com/ubuntu/ 即可 
 \end{lstlisting}
 
 \item 更新
@@ -20,4 +20,8 @@ $ sudo apt update
 # 升级软件 
 $ sudo apt upgrade 
 \end{lstlisting}
+
+
+\item 补充：\href{https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/}{清华源添加方法}
 \end{itemize}
+

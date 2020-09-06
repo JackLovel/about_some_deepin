@@ -26,9 +26,10 @@ $ sudo fdisk -l
 $ umount /dev/sdc1
 $ sudo mkfs.vfat /dev/sdc -I
 
-# 我本地 deepin 镜像的完整路径：/home/gog/下载/deepin-15.11-amd64.iso 
+# 我本地 ubuntu 镜像的完整路径：/home/gog/下载/ubuntu-20.04.1-desktop-amd64.iso 
 # U盘分区： /dev/sdc
-$ sudo dd bs=4M if=/home/gog/下载/deepin-15.11-amd64.iso of=/dev/sdc status=progress
+$ cd /home/gog/下载/
+$ sudo dd bs=4M if=ubuntu-20.04.1-desktop-amd64.iso of=/dev/sdc status=progress
 \end{lstlisting}
 
 \section{分区建议}
