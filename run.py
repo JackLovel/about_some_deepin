@@ -1,3 +1,5 @@
+# 运行：python3 run.py
+
 import os
 
 class Run:
