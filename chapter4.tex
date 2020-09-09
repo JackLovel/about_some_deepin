@@ -41,14 +41,16 @@ $ sudo apt update
 $ sudo apt install golang-go
 \end{lstlisting}
 	
-\item 添加国内源
+\item 添加代理
 \begin{lstlisting}
-export GOPROXY=https://goproxy.cn
+$ echo "export GO111MODULE=on" >> ~/.profile
+$ echo "export GOPROXY=https://goproxy.cn" >> ~/.profile
+$ source ~/.profile
 \end{lstlisting}
 
 \item 使生效
 \begin{lstlisting}
-$ source ~/.bashrc
+$ source ~/.profile
 \end{lstlisting}
 	
 \item 检测
@@ -56,16 +58,29 @@ $ source ~/.bashrc
 $ go version
 \end{lstlisting}
 
-\item 例子 hello.go: 
+\item 例子 Gin 网页: 
 
 \begin{lstlisting}
+// $ mkdir ginDemo
+// $ cd ginDemo 
+// $ go mod init gin	
+// $ go mod edit -require github.com/gin-gonic/gin@latest	
+	
 package main
-import "fmt" 
+
+import "github.com/gin-gonic/gin"
+
 func main() {
-	fmt.Printf("你好世界\n")
+	r := gin.Default()
+	r.GET("/ping", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"message": "pong",
+		})
+	})
+	r.Run() // listen and serve on 0.0.0.0:8080
 }
 
-// 在命令行里运行：go run hello.go
+// $ go run demo.go 
 \end{lstlisting}
 \end{itemize}
 
