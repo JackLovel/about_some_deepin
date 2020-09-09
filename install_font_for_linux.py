@@ -5,7 +5,7 @@ import os
 # 描述: 用于linux安装字体
 
 fonts_list = ["font/consola.ttf", 
-              "font/思源黑体/SourceHanSansCN-Normal.otf"] 
+              "font/思源宋体.otf"] 
 
 project_dir = os.path.abspath(os.path.dirname(__file__))
 
