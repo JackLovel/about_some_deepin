@@ -57,18 +57,20 @@ $ emacs --version
 \end{lstlisting}
 
 % 源码安装
-\item 第二种方法，相对于第一种方法来说，略微复杂，比如： 依赖问题;
-但是软件版本还是比较高的.
+\item 第二种方法
+
+相对于第一种方法来说，略微复杂，比如： 依赖问题;但是软件版本还是比较高的.
 
 \begin{itemize}
-\item 下载源码 \\ 
+\item 下载源码 
+
 \begin{lstlisting}
 https://www.gnu.org/software/emacs/download.html#gnu-linux
 \end{lstlisting}
 
 \item 解压
 \begin{lstlisting}
-$ tar xvf emacs-26.2.tar.gz  // 解压，并切换到解压后的目录
+$ tar xvf emacs-27.1.tar.gz  // 解压，并切换到解压后的目录
 \end{lstlisting}
 
 \item 安装依赖
@@ -76,13 +78,13 @@ $ tar xvf emacs-26.2.tar.gz  // 解压，并切换到解压后的目录
 $ sudo apt-get install build-essential \
   texinfo libx11-dev libxpm-dev libjpeg-dev \
   libpng-dev libgif-dev libtiff-dev libgtk2.0-dev \
-  libncurses-dev libxpm-dev automake autoconf 
+  libncurses-dev libxpm-dev automake autoconf gnutls-dev
 \end{lstlisting}
 
 \item 编译及安装
 \begin{lstlisting}
 $ ./configure --with-mailutils 
-$ sudo make && sudo make install  
+$ sudo make -j8 && sudo make install -j8
 \end{lstlisting}
 
 \item 检测
