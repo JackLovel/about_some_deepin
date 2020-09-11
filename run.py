@@ -26,13 +26,17 @@ class Run:
         os.system(compile_str)
         os.system(compile_str)
 
+        # os.system(compile_str)
+
+
     def clear(self):
-        path = self.path 
-        prefixs = ('aux', 'blg', 'out', 'log', 'toc', 'bbl', 'pdf', 'fls', 'fdb_latexmk')
-        filenames = os.listdir(path)
-        names = [name for name in filenames if name.endswith(prefixs)]
-        for n in names:
-            self.remove_file(path, n)
+        # path = self.path 
+        # prefixs = ('aux', 'blg', 'out', 'log', 'toc', 'bbl', 'pdf', 'fls', 'fdb_latexmk')
+        # filenames = os.listdir(path)
+        # names = [name for name in filenames if name.endswith(prefixs)]
+        # for n in names:
+        #     self.remove_file(path, n)
+        os.system("latexmk -C")
 
     def remove_file(self, path, filename):
         file = os.path.join(path, filename)
