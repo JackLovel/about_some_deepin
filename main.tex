@@ -6,7 +6,6 @@
 \usepackage[colorlinks, linkcolor=red]{hyperref}
 \usepackage{xcolor}
 \usepackage{listings}
-%\usepackage{fontspec}
 \usepackage{geometry}
 \usepackage{fancyhdr}
 \usepackage{cite}
@@ -66,10 +65,11 @@
 \CTEXoptions[today=small]
 
 \CTEXsetup[format={\Large}]{section} % 标题左对齐
-% %导入数据库的参考文献模板
-% \bibliographystyle{plain}
-% 导言区
 
+% %导入数据库的参考文献模板
+%\bibliographystyle{plain}
+
+% 导言区
 \begin{document}
 % 正文区
 % 页眉页脚
@@ -99,9 +99,8 @@
 \include{chapter5}
 \include{chapter6}
 
-% 这是个测试\cite{Nobody06}.
-
+%这是个文献引用测试\cite{command1}.
 % \bibliographystyle{plain}
-\bibliography{main}
+%\bibliography{Re}
 % 正文区
 \end{document}
