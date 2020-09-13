@@ -2,9 +2,9 @@
 这是一本针对于 `有一点Linux基础` ，并且基于 `ubuntu 20.04.1 LTS` 系统 的书
 
 ### 下载
-Github: [点击下载](main.pdf)
+Github: [点击下载](main.pdf) | [查看](https://gitee.com/wcc210/use_ubuntu/raw/master/main.pdf)
 
-码云：[源码](https://gitee.com/wcc210/use_ubuntu/) | [查看]()
+码云：[源码](https://gitee.com/wcc210/use_ubuntu/) | [查看](https://gitee.com/wcc210/use_ubuntu/raw/master/main.pdf)
 ### 疑问
 
 > 我不想下载 编译好的 pdf 文件，想自已编译？
