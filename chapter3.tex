@@ -223,14 +223,14 @@ $ cp libfcitxplatforminputcontextplugin.so \
 \end{itemize}
 \newpage
 
-% tex live 2019
+% tex live 2020
 \section{latex}
 tex live 安装 \\
 
 \begin{itemize}
 \item 下载
 \begin{lstlisting}
-// 下载 texlive2019.iso
+// 下载 texlive2020.iso
 https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/
 \end{lstlisting}
 
@@ -242,16 +242,21 @@ $ chmod +x install-tl
 $ sudo ./install-tl
 \end{lstlisting}
 
+\item 添加环境
+ \begin{lstlisting}
+ $ sudo gedit ~/.bashrc
+ \end{lstlisting}
+  
 添加下面的内容
 \begin{lstlisting}
-export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
-export MANPATH=/usr/local/texlive/2019/texmf-dist/doc/man:$MANPATH
-export INFOPATH=/usr/local/texlive/2019/texmf-dist/doc/info:$INFOPATH
+export PATH=/usr/local/texlive/2020/bin/x86_64-linux:$PATH
+export MANPATH=/usr/local/texlive/2020/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2020/texmf-dist/doc/info:$INFOPATH
 \end{lstlisting}
 
 \item 测试
 \begin{lstlisting}
-$ source ~/.zshrc
+$ source ~/.bashrc
 $ tex -v
 \end{lstlisting}
 \end{itemize}

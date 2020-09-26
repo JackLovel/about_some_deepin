@@ -7,7 +7,10 @@ class Run:
         self.path = os.path.abspath(os.path.dirname(__file__)) 
         
         # kde 下的 pdf 查看工具
-        self.pdfTool = "okular" 
+        # self.pdfTool = "okular"
+
+        # ubuntu pdf tools
+        self.pdfTool = "evince"
         
         # 编译之后的 pdf
         self.pdfFile = "main.pdf"
