@@ -5,7 +5,7 @@
 \begin{itemize}
 \item 安装 zsh：
 \begin{lstlisting}
-$ sudo apt-get install -y zsh
+$ sudo apt install -y zsh
 
 # 将 zsh 更改为默认的 shell 
 $ chsh -s /bin/zsh 
@@ -73,7 +73,7 @@ $ tar xvf emacs-27.1.tar.gz  // 解压，并切换到解压后的目录
 
 \item 安装依赖
 \begin{lstlisting}
-$ sudo apt-get install build-essential \
+$ sudo apt install build-essential \
   texinfo libx11-dev libxpm-dev libjpeg-dev \
   libpng-dev libgif-dev libtiff-dev libgtk2.0-dev \
   libncurses-dev libxpm-dev automake autoconf gnutls-dev
@@ -360,10 +360,10 @@ $ sudo add-apt-repository \
   $(lsb_release -cs) stable"
 
 // 更新 
-$ sudo apt-get update
+$ sudo apt update
 
 // 安装 docker-ce 
-$ sudo apt-get install docker-ce
+$ sudo apt install docker-ce
 
 // 检查是否安装成功 
 $ sudo docker run hello-world
