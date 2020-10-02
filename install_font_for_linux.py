@@ -22,7 +22,6 @@ def refreshFont():
 if __name__ == "__main__":
     for font in fonts_list:
         path = os.path.join(project_dir, font)
-        # print(path)
         copyFont(path)
 
     refreshFont()
