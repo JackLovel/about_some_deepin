@@ -5,16 +5,19 @@ import os
 class Run:
     def __init__(self):
         self.path = os.path.abspath(os.path.dirname(__file__)) 
-        
-        # kde 下的 pdf 查看工具
-        # self.pdfTool = "okular"
-
-        # ubuntu pdf tools
-        self.pdfTool = "evince"
-        
-        # 编译之后的 pdf
+        self.pdfTools = ("okular", "evince")
+        self.pdfTool = self.choose_pdf_tool() 
         self.pdfFile = "main.pdf"
 
+    def choose_pdf_tool(self): 
+        tool = "" 
+        for t in self.pdfTools:
+            notHasTool = os.system("which {}".format(t)) 
+            if notHasTool:
+                continue 
+            tool = t 
+        return tool 
+    
     def change_dir(self, path):
         os.chdir(path)
 
