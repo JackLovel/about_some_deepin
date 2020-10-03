@@ -110,7 +110,7 @@ https://www.oracle.com/technetwork/java/javase/downloads/jdk12-downloads-5295953
 $ tar xvf jdk-12.0.2_linux-x64_bin.tar.gz
 \end{lstlisting}
 
-\item 添加配置，将下面的内容写入 ~/.zshrc 或者 ~/.bashrc
+\item 添加配置，将下面的内容写入 $ \sim $/.zshrc 或者 $ \sim $/.bashrc
 \begin{lstlisting}
 export JAVA_HOME= 此处填写jdk的绝对路径
 export JRE_HOME=${JAVA_HOME}/jre
@@ -197,6 +197,7 @@ $ pyenv versions # 查看当前系统 python 的版本
 
 % qt creator
 \section{qt creator}
+安装 qt creator 之前，你需要去 qt 官网去注册一个账号。
 \begin{itemize}
 \item 下载 \\
 \href{https://mirrors.tuna.tsinghua.edu.cn/qt/official_releases/qt/5.14/5.14.2/qt-opensource-linux-x64-5.14.2.run}{qt creator下载地址}
@@ -206,6 +207,14 @@ $ pyenv versions # 查看当前系统 python 的版本
 $ sudo apt install -y  libgl1-mesa-dev
 $ sudo chmod +x qt-opensource-linux-x64-5.14.2.run
 $ sudo ./qt-opensource-linux-x64-5.8.0.run 
+\end{lstlisting}
+
+\item 命令行快速快捷启动
+将下面的内容写入 $ \sim $/.bashrc 中， 然后关闭命令行窗口;
+
+输入 qt, 就可以快速的启动 qt creator：
+\begin{lstlisting}
+alias qt="cd /opt/Qt5.14.2/Tools/QtCreator/bin && ./qtcreator.sh"
 \end{lstlisting}
 
 %\item 解决中文输入
@@ -241,9 +250,9 @@ $ sudo ./install-tl
   
 添加下面的内容
 \begin{lstlisting}
-export PATH=/usr/local/texlive/2020/bin/x86_64-linux:$PATH
-export MANPATH=/usr/local/texlive/2020/texmf-dist/doc/man:$MANPATH
-export INFOPATH=/usr/local/texlive/2020/texmf-dist/doc/info:$INFOPATH
+export PATH="/usr/local/texlive/2020/bin/x86_64-linux":$PATH
+export MANPATH="/usr/local/texlive/2020/texmf-dist/doc/man":$MANPATH
+export INFOPATH="/usr/local/texlive/2020/texmf-dist/doc/info":$INFOPATH
 \end{lstlisting}
 
 \item 测试
@@ -260,7 +269,7 @@ $ tex -v
 \begin{itemize}
 \item 安装：
 \begin{lstlisting}
-$ sudo apt install mysql-server -y
+$ sudo apt install -y mysql-server
 \end{lstlisting}
 
 \item 初始化数据库
