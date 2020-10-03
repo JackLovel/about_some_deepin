@@ -199,25 +199,19 @@ $ pyenv versions # 查看当前系统 python 的版本
 \section{qt creator}
 \begin{itemize}
 \item 下载 \\
-\href{http://iso.mirrors.ustc.edu.cn/qtproject/archive/qt/5.8/5.8.0/qt-opensource-linux-x64-5.8.0.run}{qt-opensource-linux-x64-5.8.0.run下载地址}
+\href{https://mirrors.tuna.tsinghua.edu.cn/qt/official_releases/qt/5.14/5.14.2/qt-opensource-linux-x64-5.14.2.run}{qt creator下载地址}
 
 \item 安装
 \begin{lstlisting}
-$ chmod +x qt-opensource-linux-x64-5.8.0.run 
-$ ./qt-opensource-linux-x64-5.8.0.run 
+$ sudo apt install -y  libgl1-mesa-dev
+$ sudo chmod +x qt-opensource-linux-x64-5.14.2.run
+$ sudo ./qt-opensource-linux-x64-5.8.0.run 
 \end{lstlisting}
 
-\item 解决中文输入
-\begin{lstlisting}
-$ cd /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts
-
-# 我的 qt安装目录： ~/Qt5.8.0
-$ cp libfcitxplatforminputcontextplugin.so \
-  ~/Qt5.8.0/5.8/gcc_64/plugins/platforminputcontexts
-
-$ cp libfcitxplatforminputcontextplugin.so \
-  ~/Qt5.8.0/Tools/QtCreator/lib/Qt/plugins/platforminputcontexts
-\end{lstlisting}
+%\item 解决中文输入
+%\begin{lstlisting}
+%
+%\end{lstlisting}
 \end{itemize}
 \newpage
 
