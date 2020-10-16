@@ -59,24 +59,23 @@ $ sudo dd bs=4M if=ubuntu-20.04.1-desktop-amd64.iso of=/dev/sdc status=progress
 这是一个建议的分区，而不是必须的，仅供参考, 这里以 250G 为例：
 
 
-\begin{tabular}{|l|c|r|}
+\begin{tabular}{|c|c|c|p{1.5cm}|}
 \hline
- 挂载点 & 分区大小(G) & 占比(百分比)\\
+ 挂载点 & 分区大小(G) & 占比(百分比) & 备注\\
 \hline
-   / & 100 & 40 \\      
+   / & 100 & 40 &\\      
 \hline
-   /home & 100 & 40 \\      
+   /home & 100 & 40 &\\      
 \hline
-  交换分区(/swap) & 8 & \\
+  交换分区(/swap) & 8 & &\\
 \hline
-  efi分区 & 0.2 & \\
+  efi分区 & 0.2 & &\\
 \hline
-  /boot & 0.2 & \\
+  /boot & 0.2 & &\\
 \hline
-
 \end{tabular}
-\end{enumerate}
 
+\end{enumerate}
 
 \setlength\parindent{2em}这里分区有几点要说明一下：
 
