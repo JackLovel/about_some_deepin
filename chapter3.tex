@@ -1,14 +1,24 @@
 \chapter{基本软件的配置}
 \section{zsh}
-由于系统原来 bash shell 不怎么好用，所以这里我们推荐使用 zsh \\
+
+zsh shell 相比 bash shell 而言更加好用
 
 \begin{itemize}
 \item 安装 zsh：
 \begin{lstlisting}
 $ sudo apt install -y zsh
 
-# 将 zsh 更改为默认的 shell 
-$ chsh -s /bin/zsh 
+# 修改默认配置
+$ chsh -s $(which zsh)
+\end{lstlisting}
+
+\item 安装 on-my-zsh
+
+oh-my-zsh是为了简化zsh的配置而开发的，因此oh-my-zsh算是zsh的配置
+
+\begin{lstlisting}
+$ git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+$ cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 \end{lstlisting}
 
 \item 安装 percol
