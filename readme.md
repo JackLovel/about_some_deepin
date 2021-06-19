@@ -2,9 +2,8 @@
 这是一本针对于 `有一点Linux基础` ，并且基于 `ubuntu 20.04.1 LTS` 系统 的书
 
 ### 下载
-Github: [点击下载](main.pdf) | [查看](https://raw.githubusercontent.com/JackLovel/use_ubuntu/master/main.pdf)
+Github: [点击下载](https://github.com/JackLovel/use_ubuntu/releases) | [查看](https://raw.githubusercontent.com/JackLovel/use_ubuntu/master/main.pdf)
 
-码云：[源码](https://gitee.com/wcc210/use_ubuntu/) | [查看](https://gitee.com/wcc210/use_ubuntu/raw/master/main.pdf)
 ### 疑问
 
 > 我不想下载 编译好的 pdf 文件，想自已编译？
@@ -14,10 +13,16 @@ Github: [点击下载](main.pdf) | [查看](https://raw.githubusercontent.com/Ja
 
 ### 安装字体 
 
-> window 
+<details>
+<summary>window</summary>
+<pre><code>
+在 font 目录下 点击进行安装，需要 使用 管理员 安装字体
+</code></pre>
+</details>
 
-在 font 目录下 点击进行安装，需要 使用 `管理员` 安装字体
-
-> Linux
-
-运行项目里的 [install_font_for_linux.py](install_font_for_linux.py) 文件  
+<details>
+<summary>Linux</summary>
+<pre><code>
+运行项目里的 [install_font_for_linux.py](install_font_for_linux.py) 文件
+</code></pre>
+</details>
